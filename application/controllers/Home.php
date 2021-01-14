@@ -29,4 +29,11 @@ class Home extends CI_Controller
     $dados['mensagem'] = "testando";
     $this->load->view('home', $dados);
   }
+
+  public function testedb()
+  {
+    $dados['mensagem'] = $this->db->get('postagens')->result();
+    echo '<pre>';
+    print_r($dados);
+  }
 }
