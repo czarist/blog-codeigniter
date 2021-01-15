@@ -26,4 +26,11 @@ class Usuarios_model extends CI_Model
     $this->db->where('id =' . $id);
     return $this->db->get()->result();
   }
+  public function listarautores()
+  {
+    $this->db->select('id,nome,img');
+    $this->db->from('usuario');
+    $this->db->order_by('nome', 'ASC');
+    return $this->db->get()->result();
+  }
 }
