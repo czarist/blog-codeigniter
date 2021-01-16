@@ -56,4 +56,11 @@ class Usuarios extends CI_Controller
       }
     }
   }
+  public function logout()
+  {
+    $dadosSessao['userlogado'] = NULL;
+    $dadosSessao['logado'] = FALSE;
+    $this->session->set_userdata($dadosSessao);
+    redirect(base_url('admin/login'));
+  }
 }
