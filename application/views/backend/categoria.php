@@ -15,7 +15,18 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-lg-12">
-
+              <?php
+              echo validation_errors('<div class="alert alert-danger">', '</div>');
+              echo form_open('admin/categoria/inserir');
+              ?>
+              <div class="form-group">
+                <label id="txt-categoria">Nome da Categoria</label>
+                <input id="txt-categoria" name="txt-categoria" type="text" class="form-control" placeholder="Digite o nome da categoria">
+              </div>
+              <button type="submit" class="btn btn-default">Cadastrar</button>
+              <?php
+              echo form_close();
+              ?>
             </div>
           </div>
           <!-- /.row (nested) -->
