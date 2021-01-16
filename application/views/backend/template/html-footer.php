@@ -1,10 +1,14 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="<?php echo base_url('assets/backend/js/jquery.min.js'); ?>"></script>
+    <!-- <script src="<?php echo base_url('assets/backend/js/jquery.min.js'); ?>"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/metismenu"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo base_url('assets/backend/js/bootstrap.min.js'); ?>"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url('assets/backend/js/sb-admin-2.js'); ?>"></script>
