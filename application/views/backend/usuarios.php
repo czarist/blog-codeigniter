@@ -21,19 +21,19 @@
               ?>
               <div class="form-group">
                 <label id="txt-nome">Nome do Usuário</label>
-                <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do Usuário">
+                <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do Usuário" value="<?php echo set_value('txt-nome'); ?>">
               </div>
               <div class="form-group">
                 <label id="txt-email">E-mail do Usuário</label>
-                <input id="txt-email" name="txt-email" type="email" class="form-control" placeholder="Digite o email do Usuário">
+                <input id="txt-email" name="txt-email" type="email" class="form-control" placeholder="Digite o email do Usuário" value="<?php echo set_value('txt-email'); ?>">
               </div>
               <div class="form-group">
                 <label id="txt-historico">Histórico do Usuário</label>
-                <textarea id="txt-historico" name="txt-historico" type="text" class="form-control" placeholder="Digite o histórico do Usuário" cols="30" rows="10"></textarea>
+                <textarea id="txt-historico" name="txt-historico" type="text" class="form-control" placeholder="Digite o histórico do Usuário" cols="30" rows="10"><?php echo set_value('txt-historico'); ?></textarea>
               </div>
               <div class="form-group">
                 <label id="txt-user">User</label>
-                <input id="txt-User" name="txt-User" type="text" class="form-control" placeholder="Digite o User do Usuário">
+                <input id="txt-user" name="txt-user" type="text" class="form-control" placeholder="Digite o User do Usuário" value="<?php echo set_value('txt-user'); ?>">
               </div>
               <div class="form-group">
                 <label id="txt-senha">Senha</label>
@@ -69,8 +69,8 @@
               foreach ($usuarios as $usuario) {
                 $nomeuser = $usuario->nome;
                 $fotouser = 'foto';
-                $alterar = anchor(base_url('admin/usuario/alterar/' . md5($usuario->id)), '<i class="fa fa-refresh fa-fw"></i>Alterar');
-                $excluir = anchor(base_url('admin/usuario/excluir/' . md5($usuario->id)), '<i class="fa fa-remove fa-fw"></i>Excluir');
+                $alterar = anchor(base_url('admin/usuarios/alterar/' . md5($usuario->id)), '<i class="fa fa-refresh fa-fw"></i>Alterar');
+                $excluir = anchor(base_url('admin/usuarios/excluir/' . md5($usuario->id)), '<i class="fa fa-remove fa-fw"></i>Excluir');
                 $this->table->add_row($fotouser, $nomeuser, $alterar, $excluir);
               };
               $this->table->set_template(array(
